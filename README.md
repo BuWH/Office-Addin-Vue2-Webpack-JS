@@ -14,7 +14,7 @@ npm run serve
 ```
 
 ### Debugging in Office Dektop Version
-Debugging in Office Dektop Version: `npm run start:desktop`
+Debugging in Office Dektop Version: `npm run start:desktop`  
 Debugging in Office Online: [Refer the steps in this link](https://github.com/OfficeDev/Excel-Scenario-based-Add-in-Samples/blob/main/Mail-Merge-Sample-Add-in/README.md#sideload-the-sample-add-in-on-excel-online)
 
 ### Compiles and minifies for production
