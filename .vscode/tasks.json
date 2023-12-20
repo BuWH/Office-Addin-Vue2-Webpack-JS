@@ -15,6 +15,16 @@
       }
     },
     {
+      "label": "Dev Server",
+      "type": "npm",
+      "script": "serve",
+      "presentation": {
+        "clear": true,
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Debug: Excel Desktop",
       "type": "npm",
       "script": "start:desktop",

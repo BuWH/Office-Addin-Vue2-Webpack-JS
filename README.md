@@ -16,7 +16,7 @@ Clone this repo and run: `npm install`
 ## Run and debug
 1. Start dev server: `npm run serve`
 2. Debug in Office
-    * Debug in Office on Windows/macOS: `npm run start:desktop`
+    * Debug in Office on Windows/macOS: `npm run start:desktop` or Press `F5` in VS Code
     * Debug in Office Online: [Refer the steps in this link](https://github.com/OfficeDev/Excel-Scenario-based-Add-in-Samples/blob/main/Mail-Merge-Sample-Add-in/README.md#sideload-the-sample-add-in-on-excel-online)
   
 ## Feedback
