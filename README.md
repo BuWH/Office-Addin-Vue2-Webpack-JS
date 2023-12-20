@@ -10,6 +10,11 @@ npm install
 npm run serve
 ```
 
+### Debugging in Office
+```
+npm run start
+```
+
 ### Compiles and minifies for production
 ```
 npm run build

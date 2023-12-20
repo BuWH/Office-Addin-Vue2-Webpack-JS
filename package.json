@@ -2,10 +2,20 @@
   "name": "vue",
   "version": "0.1.0",
   "private": true,
+  "config": {
+    "app_to_debug": "excel",
+    "app_type_to_debug": "desktop",
+    "dev_server_port": 3000
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "office-addin-debugging start manifest.xml",
+    "start:desktop": "office-addin-debugging start add-in/manifest.xml desktop",
+    "start:web": "office-addin-debugging start add-in/manifest.xml web",
+    "stop": "office-addin-debugging stop add-in/manifest.xml",
+    "validate": "office-addin-manifest validate add-in/manifest.xml"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -14,11 +24,20 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@types/office-js": "^1.0.256",
+    "@types/office-runtime": "^1.0.23",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "office-addin-cli": "^1.5.5",
+    "office-addin-debugging": "^5.0.12",
+    "office-addin-dev-certs": "^1.11.3",
+    "office-addin-lint": "^2.2.5",
+    "office-addin-manifest": "^1.12.3",
+    "office-addin-prettier-config": "^1.2.0",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
@@ -35,9 +54,8 @@
     },
     "rules": {}
   },
+  "prettier": "office-addin-prettier-config",
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
+    "ie 11"
   ]
 }
