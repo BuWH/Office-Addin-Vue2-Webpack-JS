@@ -1,5 +1,5 @@
 # Office-Addin-Vue2-Webpack-JS
-This repository contains an Excel Add-in project based on Vue2 with Office Add-in development tool chain.
+This repository contains an Excel Add-in project template based on Vue2 with Office Add-in development tool chain.
   
 This project is created based on steps in [Use Vue to build an Excel task pane add-in](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-vue) and also added Office Add-in development related configuration like debugging, manifest validating and so on.
 
@@ -8,16 +8,17 @@ This project is created based on steps in [Use Vue to build an Excel task pane a
 * Excel API
 
 ### Notice
-Project based on this template might use ES6 JavaScript, which is not compatible with [older versions of Office that use the Trident (Internet Explorer 11) browser engine](https://learn.microsoft.com/en-us/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins). For information on how to support those platforms in your add-in, see [Support older Microsoft webviews and Office versions](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/support-ie-11).
+Project based on this template might use ES6 JavaScript, which is not compatible with [older versions of Office that use the Trident (IE 11) browser engine](https://learn.microsoft.com/en-us/office/dev/add-ins/concepts/browsers-used-by-office-web-add-ins). For information on how to support those platforms, see [Support older Microsoft webviews and Office versions](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/support-ie-11).
 
 ## Project setup
 Clone this repo and run: `npm install`
 
 ## Run and debug
 1. Start dev server: `npm run serve`
+ > Make sure the dev server is started when debugging  
 2. Debug in Office
     * Debug in Office on Windows/macOS: `npm run start:desktop` or Press `F5` in VS Code
-    * Debug in Office Online: [Refer the steps in this link](https://github.com/OfficeDev/Excel-Scenario-based-Add-in-Samples/blob/main/Mail-Merge-Sample-Add-in/README.md#sideload-the-sample-add-in-on-excel-online)
+    * Debug in Office Online: [Refer the steps in this link](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing)
   
 ## Feedback
 [Create an issue]( https://github.com/BuWH/Office-Addin-Vue2-Webpack-JS/issues/new) if you meet bugs or have feature request.
