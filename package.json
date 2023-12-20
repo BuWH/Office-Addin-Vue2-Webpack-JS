@@ -15,7 +15,8 @@
     "start:desktop": "office-addin-debugging start add-in/manifest.xml desktop",
     "start:web": "office-addin-debugging start add-in/manifest.xml web",
     "stop": "office-addin-debugging stop add-in/manifest.xml",
-    "validate": "office-addin-manifest validate add-in/manifest.xml"
+    "validate": "office-addin-manifest validate add-in/manifest.xml",
+    "watch": "vue-cli-service inspect --mode development"
   },
   "dependencies": {
     "core-js": "^3.8.3",
