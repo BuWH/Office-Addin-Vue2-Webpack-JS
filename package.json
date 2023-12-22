@@ -12,11 +12,16 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "office-addin-debugging start manifest.xml",
-    "start:desktop": "office-addin-debugging start add-in/manifest.xml desktop",
-    "start:web": "office-addin-debugging start add-in/manifest.xml web",
-    "stop": "office-addin-debugging stop add-in/manifest.xml",
-    "validate": "office-addin-manifest validate add-in/manifest.xml",
-    "watch": "vue-cli-service inspect --mode development"
+    "start:desktop": "office-addin-debugging start manifest.xml desktop",
+    "start:web": "office-addin-debugging start manifest.xml web",
+    "stop": "office-addin-debugging stop manifest.xml",
+    "validate": "office-addin-manifest validate manifest.xml",
+    "watch": "vue-cli-service inspect --mode development",
+    "manifest:validate": "office-addin-manifest validate manifest.xml",
+    "manifest:update-guid": "office-addin-manifest modify manifest.xml --guid",
+    "certs:install": "office-addin-dev-certs install ",
+    "certs:verify": "office-addin-dev-certs verify",
+    "certs:uninstall": "office-addin-dev-certs uninstall"
   },
   "dependencies": {
     "core-js": "^3.8.3",

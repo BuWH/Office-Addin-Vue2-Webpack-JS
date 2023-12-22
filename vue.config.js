@@ -1,8 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
 const fs = require("fs")
 const path = require("path")
-const homedir = require('os').homedir()
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+// Configuration
+const devPort = 3000;
+
+// Calculated
+const _homeDir = require('os').homedir();
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -11,11 +16,11 @@ module.exports = defineConfig({
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
-    port: 3000,
+    port: devPort,
     https: {
-      key: fs.readFileSync(path.resolve(`${homedir}/.office-addin-dev-certs/localhost.key`)),
-      cert: fs.readFileSync(path.resolve(`${homedir}/.office-addin-dev-certs/localhost.crt`)),
-      ca: fs.readFileSync(path.resolve(`${homedir}/.office-addin-dev-certs/ca.crt`)),
+      key: fs.readFileSync(path.resolve(`${_homeDir}/.office-addin-dev-certs/localhost.key`)),
+      cert: fs.readFileSync(path.resolve(`${_homeDir}/.office-addin-dev-certs/localhost.crt`)),
+      ca: fs.readFileSync(path.resolve(`${_homeDir}/.office-addin-dev-certs/ca.crt`)),
      }
    },
   configureWebpack: {
@@ -23,11 +28,7 @@ module.exports = defineConfig({
       new CopyWebpackPlugin({
         patterns: [
           {
-            from: "add-in/assets/*",
-            to: "assets/[name][ext][query]",
-          },
-          {
-            from: "add-in/manifest*.xml",
+            from: "manifest*.xml",
             to: "[name]" + "[ext]",
           },
         ],
